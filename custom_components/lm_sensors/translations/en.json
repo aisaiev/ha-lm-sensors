@@ -1,0 +1,30 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Set up LM Sensors",
+        "description": "This integration will read hardware sensors using the lm-sensors utility.",
+        "data": {
+          "scan_interval": "Scan interval (seconds)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Cannot access lm-sensors command. For Home Assistant Container/OS, see documentation about mounting sensors command. For Home Assistant Core, install with: sudo apt-get install lm-sensors && sudo sensors-detect",
+      "unknown": "Unexpected error occurred. Check Home Assistant logs for details."
+    },
+    "abort": {
+      "already_configured": "LM Sensors is already configured"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "LM Sensors Options",
+        "data": {
+          "scan_interval": "Scan interval (seconds)"
+        }
+      }
+    }
+  }
+}
