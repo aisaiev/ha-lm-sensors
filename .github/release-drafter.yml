@@ -12,7 +12,7 @@ categories:
 change-template: "- $TITLE (#$NUMBER)"
 change-title-escapes: '\<*_&'
 template: |
-  ## What’s Changed
+  ## What's Changed
 
   $CHANGES
 
