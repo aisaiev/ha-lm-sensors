@@ -214,7 +214,7 @@ If you encounter any issues or have questions:
 
 ## Changelog
 
-### Version 1.0.0
+### Version 0.1.0
 - Initial release
 - Support for temperature, fan, voltage, power, current, and energy sensors
 - UI-based configuration
