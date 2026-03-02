@@ -137,13 +137,13 @@ class LMSensorsReader:
             if stripped.startswith("Adapter:"):
                 continue
             
-            # Feature name (ends with colon)
-            if stripped.endswith(":"):
+            # Feature name (ends with colon, indented with no spaces)
+            if not line.startswith(" ") and stripped.endswith(":"):
                 current_feature = stripped[:-1]
                 if current_chip:
                     sensors[current_chip][current_feature] = {}
-            # Chip identifier (no colon, not indented)
-            elif not line.startswith(" ") and ":" not in stripped:
+            # Chip identifier (not indented, not ending with colon, not adapter line)
+            elif not line.startswith(" ") and not stripped.endswith(":"):
                 current_chip = stripped
                 sensors[current_chip] = {}
                 current_feature = None
