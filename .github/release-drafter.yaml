@@ -1,0 +1,19 @@
+name-template: "v$RESOLVED_VERSION"
+tag-template: "v$RESOLVED_VERSION"
+categories:
+  - title: "🚀 Features"
+    label: "feature"
+  - title: "🐛 Bug Fixes"
+    label: "bug"
+  - title: "💎 Maintenance"
+    label: "maintenance"
+  - title: "📚 Documentation"
+    label: "documentation"
+change-template: "- $TITLE (#$NUMBER)"
+change-title-escapes: '\<*_&'
+template: |
+  ## What’s Changed
+
+  $CHANGES
+
+  **Full Changelog**: https://github.com/aisaiev/ha-lm-sensors/compare/$PREVIOUS_TAG...$VERSION
